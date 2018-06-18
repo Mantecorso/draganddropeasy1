@@ -11,28 +11,34 @@
 </head>
 
 <body>
-    <header><h1>probando drag and drop</h1></header>
-    <section>
-        <div ondragover="ondragover(event)" ondrop="ondrop(event)" ondragenter="enter(event)" class="columna" id="green">
-            <div draggable="true" ondragstart="ondragstart(event)" ondragend="end(event)" class="colu" id="purple">
-                <p>Luis</p>
-            </div>
-            <div draggable="true" ondragstart="ondragstart(event)" ondragend="end(event)" class="colu" id="red">
-                <p>Jurado</p>
-            </div>
-            <div draggable="true" ondragstart="ondragstart(event)" ondragend="end(event)" class="colu" id="yellow">
-                <p>Quesada</p>
-            </div>
-            <div draggable="true" ondragstart="ondragstart(event)" ondragend="end(event)" class="colu" id="white">
-                <p>Mola!!!!</p>
-            </div>
+    <header>
+        <h1>probando drag and drop</h1>
+    </header>
+    <section id="contenedor">
+        <div draggable="true" ondragstart="onDragStart(event)" class="colu" id="purple">
+            <p>Luis</p>
         </div>
-        <div ondragover="ondragover(event)" ondrop="ondrop(event)" ondragenter="enter(event)" class="columna" id="black"></div>
-        <div ondragover="ondragover(event)" ondrop="ondrop(event)" ondragenter="enter(event)" class="columna" id="orange"></div>
-        <div ondragover="ondragover(event)" ondrop="ondrop(event)" ondragenter="enter(event)" class="columna" id="pink"></div>
+        <div draggable="true" ondragstart="onDragStart(event)" class="colu" id="red">
+            <p>Jurado</p>
+        </div>
+        <div draggable="true" ondragstart="onDragStart(event)" class="colu" id="yellow">
+            <p>Quesada</p>
+        </div>
+        <div draggable="true" ondragstart="onDragStart(event)" class="colu" id="white">
+            <p>Mola!!!!</p>
+        </div>
+        <div class="columna" id="green" ondragover="allowDrop(event)" ondrop="onDrop(event)">
+
+        </div>
+        <div class="columna" id="black" ondragover="allowDrop(event)" ondrop="onDrop(event)"></div>
+        <div class="columna" id="orange" ondragover="allowDrop(event)" ondrop="onDrop(event)"></div>
+        <div class="columna" id="pink" ondragover="allowDrop(event)" ondrop="onDrop(event)"></div>
     </section>
-    <footer><p>Aqui se termina la pagina.</p></footer>
-    <script src="drag.js"></script>
+    <footer>
+        <p>Aqui se termina la pagina.</p>
+    </footer>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

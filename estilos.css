@@ -13,10 +13,11 @@
 .colu {
   width: 70px;
   height: 30px;
+  float:left;
   border-radius: 6px;
   text-align: center;
   border: 1px solid black;
-  padding: 3px;
+  padding: 6px;
 }
 
 footer {
@@ -34,6 +35,7 @@ section {
   text-align: center;
   height: 500px;
   padding-top: 50px;
+  padding-left: 100px;
 }
 
 h1 {
@@ -46,11 +48,6 @@ p {
   padding: 0px;
 }
 
-
-.columna.over {
-  border: 2px solid #FF0000;
-}
- 
 #green {
   background-color: palegreen
 }
