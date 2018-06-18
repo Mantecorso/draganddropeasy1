@@ -11,25 +11,25 @@
 </head>
 
 <body>
-    <header></header>
+    <header><h1>probando drag and drop</h1></header>
     <section>
-        <div draggable="true">
-            <div draggable="true" ondrag="ondrag(event)">
+        <div ondragover="ondragover(event)" ondrop="ondrop(event)" class="columna" id="green">
+            <div draggable="true" ondragstart="ondragstart(event)" ondragend="end(event)" class="columna" id="purple">
                 <p>Luis</p>
             </div>
-            <div draggable="true">
+            <div draggable="true" ondragstart="ondragstart(event)" ondragend="end(event)" class="columna" id="red">
                 <p>Jurado</p>
             </div>
-            <div draggable="true">
+            <div draggable="true" ondragstart="ondragstart(event)" ondragend="end(event)" class="columna" id="yellow">
                 <p>Quesada</p>
             </div>
-            <div draggable="true">
+            <div draggable="true" ondragstart="ondragstart(event)" ondragend="end(event)" class="columna" id="white">
                 <p>Mola!!!!</p>
             </div>
         </div>
-        <div draggable="true" ondrag="ondrag(event)"></div>
-        <div draggable="true" ondrop="onDrop(event)"></div>
-        <div draggable="true" ondrop="onDrop(event)"></div>
+        <div ondragover="ondragover(event)" ondrop="ondrop(event)" class="columna" id="black"></div>
+        <div ondragover="ondragover(event)" ondrop="ondrop(event)" class="columna" id="orange"></div>
+        <div ondragover="ondragover(event)" ondrop="ondrop(event)" class="columna" id="pink"></div>
     </section>
     <footer></footer>
     <script src="drag.js"></script>

@@ -1,58 +1,11 @@
-var dragSrcEl = null;
-var cols = document.querySelectorAll('#panel .columna');
- 
-//guardamos el contenido que queremos cambiar para la transferencia al dejar de arrastrar
-function handleDragStart(e) {
-  dragSrcEl = this;
-  e.dataTransfer.effectAllowed = 'move';
-  e.dataTransfer.setData('text/html', this.innerHTML);
+function ondragstart(e) {
+  e.dataTransfer.effecAllowed = 'move'; // Define el efecto como mover
+  e.dataTransfer.setData("Data", e.target.id); // Coje el elemento que se va a mover
+  e.dataTransfer.setDragImage(e.target, 0, 0); // Define la imagen que se vera al ser arrastrado el elemento y por donde se coje el elemento que se va a mover (el raton aparece en la esquina sup_izq con 0,0)
+  e.target.style.opacity = '0.4'; // Establece la opacidad del elemento que se va arrastrar
 }
- 
-function handleDragOver(e) {
-  if (e.preventDefault) {
-    e.preventDefault();
-  }
- 
-  e.dataTransfer.dropEffect = 'move';  //efecto al mover
- 
-  return false;
+
+function end(e) {
+  e.target.style.opacity = ''; // Restaura la opacidad del elemento   
+  e.dataTransfer.clearData("Data");
 }
- 
-function handleDragEnter(e) {
-  this.classList.add('over');//agregamos borde rojo en el estilo css
-}
- 
-function handleDragLeave(e) {
-  this.classList.remove('over'); //eliminamos borde rojo en el estilo css
-}
- 
-function handleDrop(e) {
-  if (e.stopPropagation) {
-    e.stopPropagation(); //evitamos abrir contenido en otra pagina al soltar
-  }
- //hacemos el intercambio de contenido html de el elemento origne y destino 
- if (dragSrcEl != this) {
- dragSrcEl.innerHTML = this.innerHTML;
- this.innerHTML = e.dataTransfer.getData('text/html');
- this.classList.remove('over');
- }
- 
-  return false;
-}
- 
-function handleDragEnd(e) {
-  [].forEach.call(cols, function (col) {
-    col.classList.remove('over');//eliminamos el borde rojo de todas las columnas
-  });
-}
- 
-//agregamos todos los eventos anteriores a cada columna mediante un ciclo
-[].forEach.call(cols, function(col) {
-   col.addEventListener('dragstart', handleDragStart, false);
-  col.addEventListener('dragenter', handleDragEnter, false);
-  col.addEventListener('dragover', handleDragOver, false);
-  col.addEventListener('dragleave', handleDragLeave, false);
-  col.addEventListener('drop', handleDrop, false);
-  col.addEventListener('dragend', handleDragEnd, false);
-});
- 

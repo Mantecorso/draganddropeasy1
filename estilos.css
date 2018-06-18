@@ -13,3 +13,35 @@
   border: 2px solid #FF0000;
 }
  
+#green {
+  background-color: palegreen
+}
+
+#black {
+  background-color: blue;
+}
+
+#orange {
+  background-color: rgb(115, 255, 0);
+}
+
+#pink {
+  background-color: pink;
+}
+
+#purple {
+  background-color: purple;
+}
+
+#red {
+  background-color: #FF0000;
+}
+
+#white {
+  background-color: paleturquoise;
+}
+
+#yellow {
+  background-color: yellowgreen;
+}
+
