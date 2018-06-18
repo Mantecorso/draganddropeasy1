@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta autor="Luis Jurado Quesada">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Drag and Drop</title>
+</head>
+
+<body>
+    <header></header>
+    <section>
+        <div draggable="true">
+            <div draggable="true" ondrag="ondrag(event)">
+                <p>Luis</p>
+            </div>
+            <div draggable="true">
+                <p>Jurado</p>
+            </div>
+            <div draggable="true">
+                <p>Quesada</p>
+            </div>
+            <div draggable="true">
+                <p>Mola!!!!</p>
+            </div>
+        </div>
+        <div draggable="true" ondrag="ondrag(event)"></div>
+        <div draggable="true" ondrop="onDrop(event)"></div>
+        <div draggable="true" ondrop="onDrop(event)"></div>
+    </section>
+    <footer></footer>
+    <script src="drag.js"></script>
+</body>
+
+</html>

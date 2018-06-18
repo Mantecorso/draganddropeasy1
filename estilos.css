@@ -1,0 +1,15 @@
+.columna{
+ width:200px;
+ height:200px;
+ float:left;
+ border: 2px solid #FFFFFF;
+ -webkit-border-radius: 10px;
+         -ms-border-radius: 10px;
+        -moz-border-radius: 10px;
+        border-radius: 10px;
+ cursor:move;
+}
+.columna.over {
+  border: 2px solid #FF0000;
+}
+ 
