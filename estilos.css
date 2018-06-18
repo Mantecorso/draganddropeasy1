@@ -9,6 +9,44 @@
         border-radius: 10px;
  cursor:move;
 }
+
+.colu {
+  width: 70px;
+  height: 30px;
+  border-radius: 6px;
+  text-align: center;
+  border: 1px solid black;
+  padding: 3px;
+}
+
+footer {
+  background-color: palevioletred;
+  text-align: center;
+}
+
+header {
+  background-color: palevioletred;
+  text-align: center;
+}
+
+section {
+  background-color: peru;
+  text-align: center;
+  height: 500px;
+  padding-top: 50px;
+}
+
+h1 {
+  margin: 0px;
+  padding: 0px;
+}
+
+p {
+  margin: 0px;
+  padding: 0px;
+}
+
+
 .columna.over {
   border: 2px solid #FF0000;
 }
